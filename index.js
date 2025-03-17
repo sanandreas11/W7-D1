@@ -28,7 +28,7 @@ const petNameInput = document.getElementById("petInput")
 const ownerNameInput = document.getElementById("ownerInput")
 const speciesInput = document.getElementById("speciesInput")
 const breedInput = document.getElementById("breedInput")
-
+const pets = []
 class Pet {
   constructor(_petName, _ownerName, _species, _breed) {
     this.petName = _petName
@@ -37,7 +37,10 @@ class Pet {
     this.breed = _breed
   }
   ownerComparison = function (pet2) {
-    if ((this.ownerName = pet2.ownerName)) return true
+    if (this.ownerName === pet2.ownerName) return true
+    else {
+      return false
+    }
   }
 }
 
@@ -54,6 +57,10 @@ form.addEventListener("submit", function (e) {
     speciesInput.value,
     breedInput.value
   )
+  pets.push(pet)
+  if (pets.length > 1) {
+    console.log(pet.ownerComparison(pets[pets.length - 2]))
+  }
   console.log("ANIMALETTO SALVATO", pet)
   form.reset()
 })

@@ -5,14 +5,14 @@ class User {
     this.age = _age
     this.location = _location
   }
-  ageComparison(userx, usery) {
-    if (userx["age"] > usery["age"]) {
-      console.log(userx.firstName + " è più vechio di " + usery.firstName)
-    } else if (userx["age"] < usery["age"]) {
-      console.log(usery.firstName + " è più vechio di " + userx.firstName)
+  ageComparison = function (user2) {
+    if (this.age > user2.age) {
+      console.log(this.firstName + " è più vechio di " + user2.firstName)
+    } else if (this.age < user2.age) {
+      console.log(this.firstName + " è più vechio di " + user2.firstName)
     } else {
       console.log(
-        userx.firstName + " e " + usery.firstName + " hanno la stessa età"
+        this.firstName + " e " + user2.firstName + " hanno la stessa età"
       )
       console.log(ageComparison(userx, usery))
     }
@@ -36,8 +36,8 @@ class Pet {
     this.species = _species
     this.breed = _breed
   }
-  ownerComparison(pet) {
-    if ((pet.ownerName = pet.ownerName)) return true
+  ownerComparison(pet2) {
+    if ((this.ownerName = pet2.ownerName)) return true
   }
 }
 

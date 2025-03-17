@@ -36,7 +36,7 @@ class Pet {
     this.species = _species
     this.breed = _breed
   }
-  ownerComparison(pet2) {
+  ownerComparison = function (pet2) {
     if ((this.ownerName = pet2.ownerName)) return true
   }
 }
